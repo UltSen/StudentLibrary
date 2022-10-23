@@ -1,73 +1,70 @@
-package za.ac.cput.domain;
 /*
 * StudentNo:217068324
 * Name: Cobain Liam Cupido
 * Class Function: 
 */
+package za.ac.cput.domain;
+
 public class Learner {
-    
-    private String studendNo;
-    private String firstName;
-    private String secondName;
-    private String classNo;
-    private boolean borrowedBook;  
+    private String studentNumber;
+    private String name;
+    private String surname;
+    private boolean canBorrow;
+    private String major;
 
     public Learner() {
     }
 
-    public Learner(String studendNo, String firstName, String secondName, String classNo, boolean borrowedBook) {
-        this.studendNo = studendNo;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.classNo = classNo;
-        this.borrowedBook = borrowedBook;
+    public Learner(String studentNumber, String name, String surname, boolean canBorrow, String major) {
+        this.studentNumber = studentNumber;
+        this.name = name;
+        this.surname = surname;
+        this.canBorrow = canBorrow;
+        this.major = major;
     }
 
-    public String getStudendNo() {
-        return studendNo;
+    public String getStudentNumber() {
+        return studentNumber;
     }
 
-    public void setStudendNo(String studendNo) {
-        this.studendNo = studendNo;
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String getClassNo() {
-        return classNo;
+    public boolean isCanBorrow() {
+        return canBorrow;
     }
 
-    public void setClassNo(String classNo) {
-        this.classNo = classNo;
+    public void setCanBorrow(boolean canBorrow) {
+        this.canBorrow = canBorrow;
     }
 
-    public boolean isBorrowedBook() {
-        return borrowedBook;
+    public String getMajor() {
+        return major;
     }
 
-    public void setBorrowedBook(boolean borrowedBook) {
-        this.borrowedBook = borrowedBook;
+    public void setMajor(String major) {
+        this.major = major;
     }
 
     @Override
     public String toString() {
-        return "Learner{" + "studendNo=" + studendNo + ", firstName=" + firstName + ", secondName=" + secondName + ", classNo=" + classNo + ", borrowedBook=" + borrowedBook + '}';
+        return "Learner{" + "studentNumber=" + studentNumber + ", name=" + name + ", surname=" + surname + ", canBorrow=" + canBorrow + ", major=" + major + '}';
     }
-    
-    
 }
-
