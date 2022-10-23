@@ -1,27 +1,31 @@
-package za.ac.cput.domain;
 /*
-* StudentNo:217068324
-* Name: Cobain Liam Cupido
-* Class Function: 
-*/
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package za.ac.cput.domain;
+
+/**
+ *
+ * @author cobai
+ */
 public class Book {
-    private String isbn;
-    private String title;
-    private String author;
-    private String catagory;
-    private String shelfNo;
+   private String isbn;
+   private String title;
+   private String author;
+   private String shelfNo;
+   private boolean availableForLoan;
 
     public Book() {
     }
 
-    public Book(String isbn, String title, String author, String catagory, String shelfNo) {
+    public Book(String isbn, String title, String author, String shelfNo, boolean availableForLoan) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
-        this.catagory = catagory;
         this.shelfNo = shelfNo;
+        this.availableForLoan = availableForLoan;
     }
-    
 
     public String getIsbn() {
         return isbn;
@@ -47,14 +51,6 @@ public class Book {
         this.author = author;
     }
 
-    public String getCatagory() {
-        return catagory;
-    }
-
-    public void setCatagory(String catagory) {
-        this.catagory = catagory;
-    }
-
     public String getShelfNo() {
         return shelfNo;
     }
@@ -63,9 +59,17 @@ public class Book {
         this.shelfNo = shelfNo;
     }
 
+    public boolean isAvailableForLoan() {
+        return availableForLoan;
+    }
+
+    public void setAvailableForLoan(boolean availableForLoan) {
+        this.availableForLoan = availableForLoan;
+    }
+
     @Override
     public String toString() {
-        return "Book{" + "isbn=" + isbn + ", title=" + title + ", author=" + author + ", catagory=" + catagory + ", shelfNo=" + shelfNo + '}';
+        return "Book{" + "isbn=" + isbn + ", title=" + title + ", author=" + author + ", shelfNo=" + shelfNo + ", availableForLoan=" + availableForLoan + '}';
     }
-    
+   
 }
